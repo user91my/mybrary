@@ -1,0 +1,15 @@
+
+<!-- NOTE ABOUT "value=< %= author.name %>" -->
+<!-- In <input> 'value' attribute, "author.name" is derived from the locals object -->
+<!-- contained in /routes/authors.js -->
+
+<!-- In /routes/authors.js, see the commented section '// New Author Route', -->
+<!-- there is a "res.render('authors/new', { author: new Author() })". -->
+
+<!-- The locals object is the 2nd argument ( { author: new Author() } ). -->
+
+<!-- "new Author()" creates another nested object within the locals which -->
+<!-- contains a 'name' property defined in the authorSchema located in -->
+<!-- /models/author.js -->
+<label for="">Name</label>
+<input type="text" name="name" value=<%= author.name %>>
